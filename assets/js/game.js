@@ -9,7 +9,6 @@ var enemyAttack = 12;
 
 // fight function (now with parameter for enemy's name)
 var fight = function(enemyName) {
-    //repeat and execute as long as the enemy-robot is alive
   while (playerHealth > 0 && enemyHealth > 0) {
     // ask player if they'd like to fight or run
     var promptFight = window.prompt('Would you like to FIGHT or SKIP this battle? Enter "FIGHT" or "SKIP" to choose.');
@@ -74,10 +73,6 @@ var startGame = function() {
 
   // fight each enemy robot by looping over them and fighting them one at a time
   for (var i = 0; i < enemyNames.length; i++) {
-      debugger;
-      //call fight function with enemy-robot
-      fight(enemyNames[i]);
-  
     // if player is still alive, keep fighting
     if (playerHealth > 0) {
       // let player know what round they are in, remember that arrays start at 0 so it needs to have 1 added to it
